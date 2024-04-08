@@ -52,7 +52,7 @@ const Navbar = async (props: Props) => {
             Dashboard {/* {user ? 'Dashboard' : 'Get Started'} */}
           </span>
         </Link>
-        Arsim{/* {user ? <UserButton afterSignOutUrl="/" /> : null} */}
+        {/* {user ? <UserButton afterSignOutUrl="/" /> : null} */}
         <MenuIcon className="md:hidden" />
       </aside>
     </header>
