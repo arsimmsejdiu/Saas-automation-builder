@@ -36,3 +36,38 @@ export interface ProductCardParallaxPorps {
   };
   translate: MotionValue<number>;
 }
+
+export type ParticlesProps = {
+  id?: string;
+  className?: string;
+  background?: string;
+  particleSize?: number;
+  minSize?: number;
+  maxSize?: number;
+  speed?: number;
+  particleColor?: string;
+  particleDensity?: number;
+};
+
+export interface ICardContainer {
+  children?: React.ReactNode;
+  className?: string;
+  containerClassName?: string;
+}
+
+export interface ICardBody {
+  children: React.ReactNode;
+  className?: string;
+}
+
+export interface ICardItem {
+  as?: React.ElementType;
+  children: React.ReactNode;
+  className?: string;
+  translateX?: number | string;
+  translateY?: number | string;
+  translateZ?: number | string;
+  rotateX?: number | string;
+  rotateY?: number | string;
+  rotateZ?: number | string;
+}
