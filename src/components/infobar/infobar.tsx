@@ -12,7 +12,7 @@ import {
   TooltipTrigger,
 } from '@/components/ui/tooltip'
 // TODO:Add the function below
-// import { UserButton } from '@clerk/nextjs'
+import { UserButton } from '@clerk/nextjs'
 // import { useBilling } from '@/providers/billing-provider'
 // import { onPaymentDetails } from '@/app/(main)/(pages)/billing/_actions/payment-connecetions'
 
@@ -73,8 +73,7 @@ const InfoBar = (props: Props) => {
             </TooltipContent>
           </Tooltip>
         </TooltipProvider>
-        User Buton
-        {/* <UserButton /> */}
+        <UserButton />
       </div>
     )
 }
