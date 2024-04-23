@@ -6,7 +6,7 @@ import MoreCredits from "./more-credits";
 type Props = {};
 
 const Workflows =  (props: Props) => { //TODO: add async when using onGetWorkflows()
-  // const workflows = await onGetWorkflows();
+  // const workflows = onGetWorkflows();
   return (
     <div className="relative flex flex-col gap-4">
       <section className="flex flex-col gap-4 m-2">
@@ -14,9 +14,7 @@ const Workflows =  (props: Props) => { //TODO: add async when using onGetWorkflo
         {/* {workflows?.length ? (
           workflows.map((flow) => <Workflow key={flow.id} {...flow} />)
         ) : (
-          <div className="mt-28 flex text-muted-foreground items-center justify-center">
-            No Workflows
-          </div>
+          <EmptyWorkflow />
         )} */}
         <Workflow 
           description="Creating a test workflow"

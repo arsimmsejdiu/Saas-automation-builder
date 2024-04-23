@@ -9,18 +9,18 @@ type Props = {
 };
 
 import {
-    Card,
-    CardContent,
-    CardDescription,
-    CardHeader,
-    CardTitle,
-  } from '@/components/ui/card'
-  import { Button } from '@/components/ui/button'
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
 
-  export const SubscriptionCard = ({onPayment, products, tier}: Props) => {
-    return (
-        <section className="flex w-full justify-center md:flex-row flex-col gap-6">
-            SubscriptionCard
-        </section>
-    )
-  }
+export const SubscriptionCard = ({ onPayment, products, tier }: Props) => {
+  return (
+    <section className="flex w-full justify-center md:flex-row flex-col gap-6">
+      SubscriptionCard
+    </section>
+  );
+};

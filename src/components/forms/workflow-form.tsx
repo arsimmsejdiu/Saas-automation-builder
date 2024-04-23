@@ -40,10 +40,11 @@ const Workflowform = ({ subTitle, title }: WorkflowformTypes) => {
   const router = useRouter();
 
   const handleSubmit = async (values: z.infer<typeof WorkFlowFormSchema>) => {
+    // TODO: create method and then uncomment const workflow = await onCreateWorkflow(values.name, values.description)
     const workflow = true;
     if (workflow) {
       toast.success("Workflow Successfully created");
-      router.refresh();
+      router.push("/workflows");
     }
 
     setClose();

@@ -9,9 +9,7 @@ const Billing = () => {
       <div className="flex flex-col gap-10 p-6">
         <div>
           <h2 className="text-2xl font-bold">All Billings</h2>
-          <p className="text-base text-white/50">
-            Add or update your billings
-          </p>
+          <p className="text-base text-white/50">Add or update your billings</p>
         </div>
       </div>
     </div>

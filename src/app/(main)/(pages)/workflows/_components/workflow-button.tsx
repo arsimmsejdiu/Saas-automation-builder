@@ -2,6 +2,7 @@
 
 import Workflowform from "@/components/forms/workflow-form";
 import CustomModal from "@/components/global/custom-modal";
+import { Hint } from "@/components/hint";
 import { Button } from "@/components/ui/button";
 import { useBilling } from "@/providers/billing-provider";
 import { useModal } from "@/providers/modal-provider";
@@ -26,7 +27,8 @@ const WorkflowButton = (props: Props) => {
   };
 
   return (
-    <Button
+    <Hint label="Add Workflow" side="left" sideOffset={10}>
+      <Button
       size={"icon"}
       {...(credits !== "0"
         ? {
@@ -38,6 +40,8 @@ const WorkflowButton = (props: Props) => {
     >
       <Plus />
     </Button>
+    </Hint>
+    
   );
 };
 
