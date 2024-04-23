@@ -23,13 +23,9 @@ import { Button } from "../ui/button";
 import { Loader2 } from "lucide-react";
 import { toast } from "sonner";
 import { useModal } from "@/providers/modal-provider";
+import { WorkflowformTypes } from "@/types/workflows-type";
 
-type Props = {
-  title?: string;
-  subTitle?: string;
-};
-
-const Workflowform = ({ subTitle, title }: Props) => {
+const Workflowform = ({ subTitle, title }: WorkflowformTypes) => {
   const { setClose } = useModal();
   const form = useForm<z.infer<typeof WorkFlowFormSchema>>({
     mode: "onChange",

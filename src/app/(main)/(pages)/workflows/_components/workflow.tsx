@@ -11,15 +11,9 @@ import { Label } from "@/components/ui/label";
 import { Switch } from "@/components/ui/switch";
 import { toast } from "sonner";
 import { onFlowPublish } from "../_actions/workflow-connections";
+import { WorkFlowTypes } from "@/types/workflows-type";
 
-type Props = {
-  name: string;
-  description: string;
-  id: string;
-  publish: boolean | null;
-};
-
-const Workflow = ({ description, id, name, publish }: Props) => {
+const Workflow = ({ description, id, name, publish }: WorkFlowTypes) => {
   const onPublishFlow = async (event: any) => {
     const response = await onFlowPublish(
       id,
@@ -32,7 +26,7 @@ const Workflow = ({ description, id, name, publish }: Props) => {
     <Card className="flex w-full items-center justify-between">
       <CardHeader className="flex flex-col gap-4">
         <Link href={`/workflows/editor/${id}`}>
-          <div className="flex flex-row gap-2">
+          <div className="flex flex-row gap-2 py-2">
             <Image
               src="/googleDrive.png"
               alt="Google Drive"

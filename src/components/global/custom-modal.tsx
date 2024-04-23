@@ -11,15 +11,9 @@ import { useModal } from "@/providers/modal-provider";
 
 import React from "react";
 import { Button } from "../ui/button";
+import { CustomModalTypes } from "@/types/workflows-type";
 
-type Props = {
-  title: string;
-  subheading: string;
-  children: React.ReactNode;
-  defaultOpen?: boolean;
-};
-
-const CustomModal = ({ title, subheading, children, defaultOpen }: Props) => {
+const CustomModal = ({ title, subheading, children, defaultOpen }: CustomModalTypes) => {
   const { isOpen, setClose } = useModal();
   const handleClose = () => setClose();
 
@@ -33,8 +27,8 @@ const CustomModal = ({ title, subheading, children, defaultOpen }: Props) => {
             {children}
           </DrawerDescription>
         </DrawerHeader>
-        <DrawerFooter className="flex flex-col gap-4 bg-background border-t-[1px] border-t-muted">
-          <DrawerClose>
+        <DrawerFooter className="flex flex-col items-center justify-center gap-4 bg-background border-t-[1px] border-t-muted">
+          <DrawerClose className="w-full max-w-[650px]">
             <Button variant="ghost" className="w-full" onClick={handleClose}>
               Close
             </Button>

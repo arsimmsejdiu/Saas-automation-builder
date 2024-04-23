@@ -84,7 +84,7 @@ export type EditorActions =
       };
     };
 
-export const nodeWrapper: Record<string, string> = {
+export const nodeMapper: Record<string, string> = {
   Notion: "notionNode",
   Slack: "slackNode",
   Discord: "discordNode",

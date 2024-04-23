@@ -1,5 +1,4 @@
 "use client";
-
 import { createContext, useContext, useEffect, useState } from "react";
 
 interface ModalProviderProps {
@@ -55,6 +54,7 @@ const ModalProvider: React.FC<ModalProviderProps> = ({ children }) => {
   return (
     <ModalContext.Provider value={{ data, setOpen, setClose, isOpen }}>
       {children}
+      {showingModal}
     </ModalContext.Provider>
   );
 };
