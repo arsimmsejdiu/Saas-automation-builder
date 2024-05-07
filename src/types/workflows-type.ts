@@ -40,3 +40,14 @@ export type WorkflowformTypes = {
 };
 
 export type CustomHandleTypes = HandleProps & { style?: CSSProperties };
+
+export type FlowInstanceTypes = {
+  children: React.ReactNode;
+  edges: any[];
+  nodes: any[];
+};
+
+export type RenderOutputAccordionTypes = {
+  state: EditorState;
+  nodeConnection: ConnectionProviderProps;
+};

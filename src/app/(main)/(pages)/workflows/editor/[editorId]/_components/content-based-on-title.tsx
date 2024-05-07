@@ -94,3 +94,5 @@ const ContentBasedOnTitle = ({
     </AccordionContent>
   )
 };
+
+export default ContentBasedOnTitle;
