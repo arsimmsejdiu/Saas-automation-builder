@@ -4,7 +4,6 @@ import { useFuzzieStore } from "@/store";
 import { RenderOutputAccordionTypes } from "@/types/workflows-type";
 import React from "react";
 import ContentBasedOnTitle from "./content-based-on-title";
-// import ContentBasedOnTitle from './content-based-on-title'import
 
 const RenderOutputAccordion = ({
   state,
