@@ -73,7 +73,7 @@ const Settings = async (props: Props) => {
         />
         <ProfileForm
           user={user}
-          onUpdate={updateUserInfo} //TODO: add logic updateUserInfo method
+          onUpdate={updateUserInfo}
         />
       </div>
     </div>

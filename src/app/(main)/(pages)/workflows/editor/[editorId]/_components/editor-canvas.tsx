@@ -1,6 +1,6 @@
 "use client";
 
-import { EditorCanvasCardType, EditorNodeType } from "@/lib/types";
+import { EdgeType, EditorCanvasCardType, EditorNodeType } from "@/lib/types";
 import { useEditor } from "@/providers/editor-provider";
 import React, { useCallback, useEffect, useMemo, useState } from "react";
 import ReactFlow, {
@@ -33,12 +33,12 @@ import EditorCanvasCardSingle from "./editor-canvas-card-single";
 
 const initialNodes: EditorNodeType[] = [];
 
-const initialEdges: { id: string; source: string; target: string }[] = [];
+const initialEdges: Edge[] = [];
 
 const EditorCanvas = () => {
   const { dispatch, state } = useEditor();
-  const [nodes, setNodes] = useState(initialNodes);
-  const [edges, setEdges] = useState(initialEdges);
+  const [nodes, setNodes] = useState<EditorNodeType[]>(initialNodes);
+  const [edges, setEdges] = useState<EdgeType[]>(initialEdges);
   const [isWorkFlowLoading, setIsWorkFlowLoading] = useState<boolean>(false);
   const [reactFlowInstance, setReactFlowInstance] =
     useState<ReactFlowInstance>();

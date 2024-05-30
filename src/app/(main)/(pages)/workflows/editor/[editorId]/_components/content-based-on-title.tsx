@@ -17,6 +17,7 @@ import { nodeMapper } from "@/lib/types";
 import GoogleFileDetails from "./google-file-details";
 import { onContentChange } from "@/lib/editor-utils";
 import GoogleDriveFiles from "./google-drive-files";
+import { NotConnected } from "./not-connected";
 
 const ContentBasedOnTitle = ({
   nodeConnection,
@@ -47,7 +48,7 @@ const ContentBasedOnTitle = ({
 
   // @ts-ignore
   const nodeConnectionType: any = nodeConnection[nodeMapper[title]];
-  if (!nodeConnectionType) return <p>Not connected</p>;
+  if (!nodeConnectionType) return <NotConnected content="Not Connected" />;
 
   const isConnected =
     title === "Google Drive"
@@ -64,7 +65,7 @@ const ContentBasedOnTitle = ({
           }`
         ];
 
-  if (!isConnected) return <p>Not connected</p>;
+  if (!isConnected) return <NotConnected content="Not Connected" />;
 
   return (
     <AccordionContent>

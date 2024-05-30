@@ -8,6 +8,7 @@ import { Connection } from "@/lib/types";
 import { useNodeConnections } from "@/providers/connections-provider";
 import { EditorState } from "@/providers/editor-provider";
 import { useFuzzieStore } from "@/store";
+import { NotConnected } from "./not-connected";
 
 const RenderConnectionAccordion = ({
   connection,
@@ -66,13 +67,13 @@ const RenderConnectionAccordion = ({
                     placeholder="Select channels"
                     emptyIndicator={
                       <p className="text-center text-lg leading-10 text-gray-600 dark:text-gray-400">
-                        no results found
+                        <NotConnected content="no results found"/>
                       </p>
                     }
                   />
                 </>
               ) : (
-                "No slack channels found. Please add your Slack bot to your Slack channel"
+                <NotConnected content="No slack channels found. Please add your Slack bot to your Slack channel"/>
               )}
             </div>
           )}

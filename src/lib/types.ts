@@ -17,7 +17,7 @@ export type Connection = {
   title: ConnectionTypes;
   description: string;
   image: string;
-  connectionKey: keyof ConnectionProviderProps
+  connectionKey: keyof ConnectionProviderProps;
   accessTokenKey?: string;
   alwaysTrue?: boolean;
   slackSpecial?: boolean;
@@ -53,6 +53,12 @@ export type EditorNodeType = {
     y: number;
   };
   data: EditorCanvasCardType;
+};
+
+export type EdgeType = { 
+  id: string; 
+  source: string; 
+  target: string; 
 };
 
 export type EditorNode = EditorNodeType;
