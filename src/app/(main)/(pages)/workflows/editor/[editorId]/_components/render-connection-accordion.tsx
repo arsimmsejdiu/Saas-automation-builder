@@ -67,13 +67,13 @@ const RenderConnectionAccordion = ({
                     placeholder="Select channels"
                     emptyIndicator={
                       <p className="text-center text-lg leading-10 text-gray-600 dark:text-gray-400">
-                        <NotConnected content="no results found"/>
+                        <NotConnected content="no results found" />
                       </p>
                     }
                   />
                 </>
               ) : (
-                <NotConnected content="No slack channels found. Please add your Slack bot to your Slack channel"/>
+                <NotConnected content="No slack channels found. Please add your Slack bot to your Slack channel" />
               )}
             </div>
           )}

@@ -34,6 +34,7 @@ const EditorCanvasSidebar = ({ nodes }: Props) => {
   const { nodeConnection } = useNodeConnections();
   const { googleFile, setSlackChannels } = useFuzzieStore();
 
+  // WIP: Connect DB
   useEffect(() => {
     if (state) {
       // TODO: create method onConnection(nodeConnection, state, googleFile) in "@/lib/editor-utils" file
