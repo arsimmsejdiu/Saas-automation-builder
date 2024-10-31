@@ -113,3 +113,26 @@ export const postMessageInSlackChannel = async (
     );
   }
 };
+
+// Wrapper function to post messages to multiple slack channels
+export const postMessagesToSlack = async (
+  slackAccessToken: string,
+  selectedSlackChannels: Option[],
+  content: string
+): Promise<{ message: string }> => {
+  if (!content) return { message: "Content is empty" };
+  if (!selectedSlackChannels?.length)
+    return { message: "No channels selected" };
+
+  try {
+    selectedSlackChannels
+      .map((channel) => channel?.value)
+      .forEach((channel) => {
+        postMessageInSlackChannel(slackAccessToken, channel, content);
+      });
+  } catch (error: any) {
+    return { message: "Message could not be sent to Slack" };
+  }
+
+  return { message: "Message sent to Slack" };
+};
