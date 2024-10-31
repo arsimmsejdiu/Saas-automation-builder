@@ -36,10 +36,8 @@ const EditorCanvasSidebar = ({ nodes }: Props) => {
 
   // WIP: Connect DB
   useEffect(() => {
-    if (state) {
-      // TODO: create method onConnection(nodeConnection, state, googleFile) in "@/lib/editor-utils" file
-      // TODO: remove the return after creating and calling the function and also the comments
-      return;
+    if(state) {
+     
     }
   }, [state]);
 
