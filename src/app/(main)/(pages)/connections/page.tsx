@@ -3,6 +3,9 @@ import React from "react";
 import ConnectionCard from "./_components/connection-card";
 import { currentUser } from "@clerk/nextjs";
 import { getUserData } from "./_actions/get-user";
+import { onDiscortConnect } from "./_actions/discord-connection";
+import { onNotionConnect } from "./_actions/notion-connection";
+import { onSlackConnect } from "./_actions/slack-connection";
 
 type Props = {
   searchParams?: { [key: string]: string | undefined };
@@ -54,6 +57,37 @@ const Connections = async (props: Props) => {
 
   const onUserConnections = async () => {
     console.log(database_id);
+    await onDiscortConnect(
+      channel_id!,
+      webhook_id!,
+      webhook_name!,
+      webhook_url!,
+      user.id,
+      guild_id!,
+      guild_name!
+    )
+
+    await onNotionConnect(
+      access_token!,
+      workspace_id!,
+      workspace_icon!,
+      workspace_name!,
+      database_id!,
+      user.id
+    );
+
+    await onSlackConnect(
+      app_id!,
+      authed_user_id!,
+      authed_user_token!,
+      slack_access_token!,
+      bot_user_id!,
+      team_id!,
+      team_name!,
+      user.id
+    );
+
+
     const connections: any = {};
 
     const user_info = await getUserData(user.id);

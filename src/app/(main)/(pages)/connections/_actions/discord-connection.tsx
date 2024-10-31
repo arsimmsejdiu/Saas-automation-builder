@@ -4,7 +4,7 @@ import { db } from "@/lib/db";
 import { currentUser } from "@clerk/nextjs";
 import axios from "axios";
 
-export const inDiscortConnect = async (
+export const onDiscortConnect = async (
   channel_id: string,
   webhook_id: string,
   webhook_name: string,
