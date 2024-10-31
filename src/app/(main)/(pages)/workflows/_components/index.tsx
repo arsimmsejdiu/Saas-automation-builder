@@ -6,7 +6,7 @@ import MoreCredits from "./more-credits";
 type Props = {};
 
 const Workflows =  (props: Props) => { //TODO: add async when using onGetWorkflows()
-  // const workflows = onGetWorkflows();
+  const workflows = onGetWorkflows();
   return (
     <div className="relative flex flex-col gap-4">
       <section className="flex flex-col gap-4 m-2">

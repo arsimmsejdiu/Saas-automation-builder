@@ -61,7 +61,7 @@ const Workflow = ({ description, id, name, publish }: WorkFlowTypes) => {
         </Label>
         <Switch
           id="airplane-mode"
-          // onClick={onPublishFlow}
+          onClick={onPublishFlow}
           defaultChecked={publish!}
         />
       </div>
