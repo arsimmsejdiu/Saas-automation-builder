@@ -112,9 +112,9 @@ export const postContentToWebHook = async (content: string, url: string) => {
   if (content !== "") {
     const posted = await axios.post(url, { content });
     if (posted) {
-      return { message: "Success" };
+      return { message: "success" };
     }
     return { message: "Failed Request" };
   }
-  return { message: "String Empty" };
+  return { message: "success" };
 };

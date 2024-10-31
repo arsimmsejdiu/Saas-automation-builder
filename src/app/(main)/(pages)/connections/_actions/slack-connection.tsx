@@ -134,5 +134,5 @@ export const postMessagesToSlack = async (
     return { message: "Message could not be sent to Slack" };
   }
 
-  return { message: "Message sent to Slack" };
+  return { message: 'Success' }
 };
